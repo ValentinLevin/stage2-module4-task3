@@ -19,7 +19,7 @@ public class TextComponent extends AbstractTextComponent {
                 }
                 sb.append(textComponent.operation());
         }
-        return sb.toString();
+        return sb.toString().trim();
     }
 
     @Override

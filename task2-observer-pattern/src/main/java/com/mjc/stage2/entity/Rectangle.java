@@ -3,6 +3,7 @@ package com.mjc.stage2.entity;
 import com.mjc.stage2.Observable;
 import com.mjc.stage2.Observer;
 import com.mjc.stage2.event.RectangleEvent;
+import com.mjc.stage2.warehouse.RectangleWarehouse;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,6 +19,8 @@ public class Rectangle implements Observable {
         this.id = id;
         this.sideA = sideA;
         this.sideB = sideB;
+        addObserver(RectangleWarehouse.getInstance());
+        this.notifyObserver();
     }
 
     public int getId() {
